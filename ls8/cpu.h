@@ -2,11 +2,15 @@
 #define _CPU_H_
 
 // Holds all information about the CPU
-struct cpu {
+struct cpu
+{
   // TODO
   // PC
   // registers (array)
   // ram (array)
+  unsigned char pc;
+  unsigned char reg[8];
+  unsigned char ram[256];
 };
 
 // Instructions
@@ -14,7 +18,7 @@ struct cpu {
 // These use binary literals. If these aren't available with your compiler, hex
 // literals should be used.
 
-#define LDI  0b10000010
+#define LDI 0b10000010
 // TODO: more instructions here. These can be used in cpu_run().
 
 // Function declarations
